@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Before Run this project, Make sure you install the NodeJs and type this command
+
+### `npm install` or `npm i`
+This command will install Current version of React and other required components. I cannot upload it on repo because it will cost more time for download and would not up-to-date with next version of node_modules in the future.
+
+### `ng serve`
+This command will serve the project on your locals and integrate it with node_modules your install before.
+
 ## Available Scripts
 
 In the project directory, you can run:

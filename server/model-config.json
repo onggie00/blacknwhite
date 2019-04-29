@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "barbershop": {
+    "dataSource": "db",
+    "public": true
+  },
+  "member": {
+    "dataSource": "db",
+    "public": true
+  },
+  "stylist": {
+    "dataSource": "db",
+    "public": true
+  },
+  "model_rambut": {
+    "dataSource": "db",
+    "public": true
+  },
+  "category_model": {
+    "dataSource": "db",
+    "public": true
+  },
+  "feedback": {
+    "dataSource": "db",
+    "public": true
+  },
+  "like_model": {
+    "dataSource": "db",
+    "public": true
+  },
+  "antrian": {
+    "dataSource": "db",
+    "public": true
+  },
+  "admin": {
+    "dataSource": "db",
+    "public": true
+  }
+}

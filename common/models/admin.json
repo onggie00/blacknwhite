@@ -1,0 +1,36 @@
+{
+  "name": "admin",
+  "plural": "admin",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama_lengkap": {
+      "type": "string",
+      "required": true
+    },
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "previleges": {
+      "type": "number",
+      "required": true,
+      "default": 2
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

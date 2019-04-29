@@ -1,0 +1,34 @@
+{
+  "name": "stylist",
+  "plural": "stylist",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama_lengkap": {
+      "type": "string",
+      "required": true
+    },
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "img_file": {
+      "type": "string",
+      "default": "Stylist.jpg"
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "updated_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

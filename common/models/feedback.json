@@ -1,0 +1,30 @@
+{
+  "name": "feedback",
+  "plural": "feedback",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "nama_lengkap": {
+      "type": "string"
+    },
+    "feedback": {
+      "type": "string",
+      "required": true
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "model_rambut",
+  "plural": "model_rambut",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "img_file": {
+      "type": "string",
+      "required": true
+    },
+    "category_id": {
+      "type": "number",
+      "required": true
+    },
+    "is_deleted": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

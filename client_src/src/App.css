@@ -1,0 +1,97 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+.branded-logo {
+  background: #231f20 url(./Assets/image/logo.svg) no-repeat;
+  background-size: cover;
+  max-width: 300px;
+  background-position: center;
+  height: 64px;
+}
+.brand-logo p {
+  padding: 0 0 10px 5px;
+}
+.logo {
+  width: 330px;
+  margin-left: -30px;
+  background-color: #231f20;
+  height: 64px;
+}
+.logo img {
+  padding: 0px;
+  width: 330px;
+  height: 64px;
+}
+.logo:hover {
+  background-color: #231f20;
+}
+.main {
+  padding-left: 300px;
+}
+.content-admin {
+  padding: 20px 20px 20px 25%;
+}
+.loginlayout {
+  background: #f8f8f8 url(./Assets/image/admin_resource/bg-login.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding-top: 10%;
+  height: 100vh;
+}
+.loginpage {
+  padding: 30px;
+  width: 40%;
+  background: #f8f8f8;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+.loginpage h1 {
+  text-align: center;
+}
+.login-main-content {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 992px) {
+  .main {
+    padding-left: 10px;
+  }
+  .logo img {
+    padding: 0px;
+    width: 300px;
+    max-height: 64px;
+  }
+  .loginpage {
+    padding: 30px;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-left: 10px;
+  }
+  .logo img {
+    padding: 0px;
+    width: 300px;
+    max-height: 56px;
+  }
+  .loginpage {
+    padding: 30px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .main {
+    padding-left: 10px;
+  }
+  .logo img {
+    padding: 0px;
+    width: 300px;
+    max-height: 56px;
+  }
+  .loginpage {
+    padding: 30px;
+    width: 90%;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "barbershop",
+  "plural": "barbershop",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama": {
+      "type": "string"
+    },
+    "alamat": {
+      "type": "string",
+      "required": true
+    },
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "owner": {
+      "type": "string",
+      "required": true
+    },
+    "updated_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "antrian",
+  "plural": "antrian",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "nama_lengkap": {
+      "type": "string"
+    },
+    "status_antrian": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "created_at": {
+      "type": "date"
+    },
+    "nomor": {
+      "type": "number",
+      "required": true
+    },
+    "stylist_id": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

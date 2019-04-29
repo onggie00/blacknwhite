@@ -1,0 +1,38 @@
+{
+  "name": "member",
+  "plural": "member",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nama_lengkap": {
+      "type": "string",
+      "required": true
+    },
+    "notelp": {
+      "type": "string",
+      "required": true
+    },
+    "alamat": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "date",
+      "required": true
+    },
+    "updated_at": {
+      "type": "date"
+    },
+    "status": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

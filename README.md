@@ -3,7 +3,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Before Run this project, Make sure you install the NodeJs and type this command
 
 ### `npm install` or `npm i`
-This command will install Current version of React and other required components. I cannot upload it on repo because it will cost more time for download and would not up-to-date with next version of node_modules in the future.
+This command will install Current version of React and other required components. I cannot upload it on repo because it will cost more time for download and would not up-to-date with next version of node_modules in the future. On this folder, it will install LoopbackJS.
+
+### Go to client_src folder (where react project located) and type
+`npm install` 
+that command will install Your current React project with the current react version available on NodeJS
+
+After installed all of the required package, try to set our backend first.
+
+## Make sure you install MySQL first in your local system.
+Create User then make a database called (blacknwhite_db). this step is very important. Dont forget to check config.json, datasource.json and another setting to connect with database. After setting all the config. go to `server` folder then type this.
+
+## This command will make MySQL Scheme for this project `node create-sample-tables.js`
+it will generate our models inside the LoopbackJS and make Schema for MySQL. 
+
+## If you want to update several tables `node update-sample-tables.js`
+The different is, With create-sample-tables.js it will AutoMigrate all of th tables but, it will erase all data inside the tables (Reset). But with update-sample-tables.js it will Update several tables and keep the data inside the tables. Be Careful with these 2 command. and make sure choose the best for you.
 
 ### `ng serve`
 This command will serve the project on your locals and integrate it with node_modules your install before.

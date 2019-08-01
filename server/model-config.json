@@ -59,7 +59,7 @@
     "dataSource": "db",
     "public": true
   },
-  "like_model": {
+  "rating_model": {
     "dataSource": "db",
     "public": true
   },
@@ -68,6 +68,10 @@
     "public": true
   },
   "admin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "highlight": {
     "dataSource": "db",
     "public": true
   }

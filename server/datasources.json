@@ -3,7 +3,7 @@
     "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "blacknwhite_db",
+    "database": "bnwbarbe_blacknwhite_db",
     "password": "onggie123",
     "name": "db",
     "user": "root",

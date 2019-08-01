@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -13,6 +15,9 @@ import Login from "./Components/Login/Login";
 //import Dataadmin from "./Components/admin/DataAdmin";
 import Navbaradmin from "./Components/admin/Navbar_admin";
 import Navbar from "./Components/Navbar";
+import Logout from "./Components/admin/Logout_admin";
+import Admintable from "./Components/admin/Admin_datatable";
+import Member from "./Components/member/Member";
 
 import "./App.css";
 
@@ -20,47 +25,57 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      Admin: []
+      Admin: [],
+      is_login: false
     };
   }
+
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Navbar />
-            <Home />
-          </Route>
-          <Route exact path="/about">
-            <Navbar />
-            <About />
-          </Route>
-          <Route exact path="/contact">
-            <Navbar />
-            <Contact />
-          </Route>
-          <Route
-            exact
-            path="/admin/login"
-            name="adminlogin"
-            component={Login}
-          />
+      <div>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/about">
+              <Navbar />
+              <About />
+            </Route>
+            <Route exact path="/contact">
+              <Navbar />
+              <Contact />
+            </Route>
+            <Route
+              exact
+              path="/admin/login"
+              name="adminlogin"
+              component={Login}
+            />
 
-          <Route
-            exact
-            path="/admin"
-            name="admindashboard"
-            render={props => (
-              <Navbaradmin {...props} username={this.state.Admin} />
-            )}
-          />
+            <Route
+              exact
+              path="/admin"
+              name="admindashboard"
+              render={props => <Navbaradmin {...props} />}
+              data={this.state.Admin}
+            />
+            <Route exact path="/logout" name="adminlogout" component={Logout} />
+            <Route
+              exact
+              path="/admin/datatable"
+              name="admintable"
+              component={Admintable}
+            />
+            <Route exact path="/register" component={Member} />
 
-          <Route>
-            <Navbar />
-            <Error />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+            <Route name="not found">
+              <Navbar />
+              <Error />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
     );
   }
 }

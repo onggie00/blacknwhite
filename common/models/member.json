@@ -18,6 +18,9 @@
     "alamat": {
       "type": "string"
     },
+    "password": {
+      "type": "string"
+    },
     "created_at": {
       "type": "date",
       "required": true

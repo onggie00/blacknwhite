@@ -22,6 +22,14 @@
       "type": "string",
       "required": true
     },
+    "jam_buka": {
+      "type": "string",
+      "required": true
+    },
+    "jam_tutup": {
+      "type": "string",
+      "required": true
+    },
     "updated_at": {
       "type": "date"
     }

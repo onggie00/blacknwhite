@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import Axios from "axios";
 
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       Admin: [],
+      adminuser: "",
       inputuser: "",
       inputpass: ""
     };
+  }
+  changeValue(childvalue) {
+    this.setState({ Admin: childvalue });
   }
 
   fetchlogin(adminlogin) {
@@ -26,7 +30,11 @@ class Login extends Component {
           },
           () => {
             console.log("Login Success");
-            this.props.history.push("/admin");
+            this.changeValue(response.data);
+            this.props.history.push({
+              pathname: "/admin",
+              data: this.state.Admin
+            });
           }
         );
       })
@@ -37,6 +45,9 @@ class Login extends Component {
           console.log(this.state);
           alert("Wrong Username or Password");
           this.resetInput();
+        } else if (err.response.status === 401) {
+          console.log(this.state);
+          alert("Authenticate required");
         }
       });
   }
@@ -47,6 +58,7 @@ class Login extends Component {
       username: this.refs.username.value
     };
     this.fetchlogin(adminlogin);
+    //this.savelogin(adminlogin);
     e.preventDefault();
   }
 

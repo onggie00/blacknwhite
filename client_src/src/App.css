@@ -1,7 +1,183 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden !important;
 }
+.hidden {
+  display: none;
+}
+.default {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav_logo img {
+  width: 100px;
+  height: 100px;
+  filter: brightness(80%);
+}
+.no-shadows {
+  box-shadow: none !important;
+}
+nav {
+  font-family: "Open Sans", "Roboto", Verdana;
+  font-weight: 600;
+}
+.about {
+  padding: 0px 30px 20px 30px;
+  text-align: center;
+  align-content: center;
+}
+.about h1 {
+  font-family: "Lora", "Roboto", serif;
+  color: #552d25;
+  line-height: 1;
+}
+.about h6 {
+  color: #c98a6a;
+  margin-bottom: 50px;
+}
+.about p {
+  line-height: 1.6em;
+}
+.about .subtitle {
+  font-family: "Lora", "Roboto", serif;
+  font-size: 16pt;
+}
+.about img {
+  width: 40%;
+  height: 40%;
+  margin-bottom: 50px;
+}
+.full {
+  background: #ffffff url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+  display: block;
+  filter: brightness(100%);
+}
+
+.zoom {
+  animation: shrink 10s alternate infinite;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.ambil_antrian {
+  color: #ffffff;
+}
+.ambil_antrian .title_antrian {
+  font-family: "Satisfy", "Roboto", Verdana;
+  font-size: 50pt;
+  text-align: center;
+  text-shadow: 3px 3px 5px #000000;
+  padding-top: 100px;
+}
+.form_antrian {
+  width: 100%;
+}
+.form_antrian p {
+  color: #0b1829;
+  font-family: "Open Sans", serif;
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+.container-fluid {
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.slick-slider1 {
+  height: 700px;
+  box-sizing: border-box;
+  box-shadow: #231f20;
+  background-color: #ffffff;
+}
+
+.slick-slider1 img {
+  height: 650px;
+  width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  filter: brightness(50%);
+  padding-bottom: 10px;
+}
+
+.slide {
+  position: relative;
+}
+.slide .white-caption {
+  color: #f8f8f8;
+}
+.slide2 {
+  line-height: 1;
+}
+
+.title {
+  font-family: "Satisfy", Verdana, Tahoma;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  text-shadow: 2px 2px 5px #000000;
+  font-size: 45pt;
+}
+
+.paragraph {
+  font-family: "Roboto", "Poppins", serif;
+  position: absolute;
+  font-size: 14pt;
+  font-style: italic;
+  top: 46%;
+  left: 20%;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.title_right {
+  font-family: "Satisfy", Verdana, Tahoma;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  text-shadow: 2px 2px 5px #000000;
+  font-size: 45pt;
+}
+
+.paragraph_right {
+  font-family: "Roboto", "Poppins", serif;
+  position: absolute;
+  font-size: 14pt;
+  font-style: italic;
+  top: 46%;
+  left: 60%;
+  text-shadow: 2px 2px 5px #000000;
+}
+.top_title {
+  font-family: "Roboto-bold", Verdana, Tahoma;
+  font-size: 16pt;
+  text-align: center;
+}
+
+.top_paragraph {
+  font-family: "Roboto", "Poppins", serif;
+  position: absolute;
+  font-size: 14pt;
+  font-style: italic;
+  top: 46%;
+  left: 20%;
+}
+
 .branded-logo {
   background: #231f20 url(./Assets/image/logo.svg) no-repeat;
   background-size: cover;
@@ -52,6 +228,104 @@ body {
 .login-main-content {
   opacity: 1;
 }
+.top_model_content {
+  padding: 30px;
+}
+.top_model_content img {
+  height: 300px;
+  width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+.top_model {
+  line-height: 1;
+  padding: 50px 10px 50px 10px;
+}
+.top_model h1 {
+  font-weight: 300;
+  padding: 30px 50px 0px 50px;
+  text-align: center;
+  font-family: "Lora", "Poppins", Verdana;
+  color: #552d25;
+}
+.top_model .top_subtitle {
+  text-align: center;
+  color: #c98a6a;
+  font-size: 12pt;
+}
+.register-left-bg {
+  height: 100vh;
+}
+.bg-register {
+  background: #2b2a2a url(./Assets/image/homepage/bg-register.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.register-left {
+  color: black;
+}
+.register-text {
+  padding: 10px;
+  margin: 10px;
+}
+.register-form {
+  padding-top: 10vh;
+}
+.stylist_section {
+  background: #f8f8f8 url(./Assets/image/homepage/bg-gradient.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 1;
+  padding: 50px 10px 50px 10px;
+}
+.stylist_section h1 {
+  font-family: "Lora", "Poppins", serif;
+  text-align: center;
+  padding: 30px 30px 0px 30px;
+  color: #552d25;
+}
+.stylist_subtitle {
+  font-weight: 300;
+  text-align: center;
+  color: #c98a6a;
+  font-size: 12pt;
+}
+.stylist_section img {
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 12px silver;
+}
+.stylist_section .stylist_description {
+  line-height: 1.6;
+  padding-top: 20px;
+}
+.hairstyle_model {
+  background: #f8f8f8 url(./Assets/image/homepage/bg-wall.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px;
+}
+.hairstyle_title {
+  padding: 20px 20px 0px 50px;
+  font-family: "Poppins", serif;
+  color: #552d25;
+}
+.hairstyle_subtitle {
+  line-height: 1;
+  padding-left: 50px;
+}
+
+.footer {
+  padding-top: 10px;
+  background-color: #252525;
+  font-size: 10pt;
+  padding: 50px 20px 10px 20px;
+  color: #ffffff;
+  box-shadow: 0px 40px 10px -10px #fefefe inset;
+}
 
 @media only screen and (max-width: 992px) {
   .main {
@@ -65,6 +339,19 @@ body {
   .loginpage {
     padding: 30px;
     width: 70%;
+  }
+  .title_right {
+    left: 50%;
+  }
+
+  .paragraph_right {
+    left: 50%;
+  }
+  .bg-register {
+    background: #2b2a2a url(./Assets/image/homepage/bg-stylist.jpg) no-repeat;
+    background-size: 200% 100%;
+    background-position: center;
+    height: 100vh;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -80,6 +367,12 @@ body {
     padding: 30px;
     width: 80%;
   }
+  .bg-register {
+    background: #2b2a2a url(./Assets/image/homepage/bg-register.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+  }
 }
 @media only screen and (max-width: 400px) {
   .main {
@@ -93,5 +386,68 @@ body {
   .loginpage {
     padding: 30px;
     width: 90%;
+  }
+  .slick-slide img {
+    object-fit: 50% 100%;
+  }
+  .title_right {
+    left: 20%;
+  }
+
+  .paragraph_right {
+    left: 20%;
+    font-size: 12pt;
+  }
+  .about img {
+    width: 80%;
+    height: 80%;
+    margin-bottom: 100px;
+  }
+  .full {
+    background: #ffffff url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    display: block;
+    filter: brightness(100%);
+  }
+
+  .zoom {
+    animation: shrink 30s alternate infinite;
+  }
+
+  @keyframes shrink {
+    0% {
+      background-size: 105%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+  .ambil_antrian {
+    color: #ffffff;
+  }
+  .ambil_antrian .title_antrian {
+    font-family: "Satisfy", "Roboto", Verdana;
+    font-size: 25pt;
+    text-align: center;
+    text-shadow: 3px 3px 5px #000000;
+    padding-top: 20px;
+  }
+  .form_antrian {
+    width: 100%;
+  }
+  .form_antrian p {
+    color: #0b1829;
+    font-family: "Open Sans", serif;
+    font-size: 16pt;
+    font-weight: 600;
+  }
+  .footer {
+    background-color: #fefaf7;
+    font-size: 10pt;
+    padding: 50px 20px 20px 20px;
   }
 }

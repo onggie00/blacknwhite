@@ -1,72 +1,85 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import logo from "../Assets/image/logo.png"; // logo import
+import logo from "../Assets/image/logo/logo_black.png"; // logo import
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBNavItem,
+  MDBNavLink,
+  MDBBtn
+} from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Admin: []
+      collapse: false,
+      isWideEnough: false
     };
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
   }
 
   render() {
     return (
       <div>
-        <nav className="grey darken-4">
-          <div className="nav-wrapper">
-            <a href="/" className="brand-logo">
-              <img src={logo} alt="logo" />
-            </a>
-            <Link
-              to="#"
-              data-target="main-menu"
-              className="sidenav-trigger button-collapse show-on-large"
+        <header>
+          <Router>
+            <MDBNavbar
+              color="elegant-color"
+              fixed="top"
+              dark
+              expand="md"
+              scrolling
+              transparent
             >
-              <i className="fa fa-bars" />
-            </Link>
-            <ul className="right hide-on-small-only">
-              <li>
-                <Link to="/">Beranda</Link>
-              </li>
-              <li>
-                <Link to="/antrian">Ambil Antrian</Link>
-              </li>
-              <li>
-                <Link to="/contact">Kontak kami</Link>
-              </li>
-              <li>
-                <Link to="/about">Tentang Kami</Link>
-              </li>
-            </ul>
-            <ul className="sidenav sidenav-close" id="main-menu">
-              <li>
-                <Link to="/admin/login">
-                  <i className="fa fa-scissors" />
-                  Administrator
-                </Link>
-              </li>
-              <li>
-                <Link to="/member/add">
-                  <i className="fa fa-plus" />
-                  Daftar Member
-                </Link>
-              </li>
-              <li>
-                <Link to="/categories">
-                  <i className="fa fa-table" />
-                  Lihat Model Rambut
-                </Link>
-              </li>
-              <li>
-                <Link to="/faq">
-                  <i className="fa fa-question-circle" />
-                  Tanya Kami
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+              <MDBNavbarBrand href="/" className="nav_logo">
+                <b>BLACK &amp; WHITE</b>
+              </MDBNavbarBrand>
+              {!this.state.isWideEnough && (
+                <MDBNavbarToggler onClick={this.onClick} />
+              )}
+              <MDBCollapse isOpen={this.state.collapse} navbar>
+                <MDBNavbarNav right>
+                  <MDBNavItem active>
+                    <MDBNavLink to="/">Beranda</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#about">Tentang Kami</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#antrian">Ambil Antrian</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#stylist">Stylist Kami</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="/hairstyle">Hairstyle</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="#faq">Tanya Kami</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink
+                      to="#login_member"
+                      onClick={this.props.togglelogin}
+                    >
+                      Login Member
+                    </MDBNavLink>
+                  </MDBNavItem>
+                </MDBNavbarNav>
+              </MDBCollapse>
+            </MDBNavbar>
+          </Router>
+        </header>
       </div>
     );
   }

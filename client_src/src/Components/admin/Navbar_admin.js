@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../Assets/image/logo.svg"; // logo import
-import Dataadmin from "./DataAdmin";
+//import Dataadmin from "./DataAdmin";
+import Dashboard from "./Dashboard";
+//import Login from "../Login/Login";
 
 class Navbar_admin extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      Admin: this.props.data
+    };
+  }
   render() {
     console.log(this.props);
+    const { data } = this.props.location;
+    //const { Admin } = this.state.Admin;
     return (
       <div>
         <nav className="grey darken-4">
@@ -27,7 +38,7 @@ class Navbar_admin extends Component {
                   onClick={() => window.location.refresh()}
                 >
                   <i className="fa fa-user" />
-                  &nbsp; LOGOUT
+                  &nbsp; LOGOUT {data.username}
                 </NavLink>
               </li>
             </ul>
@@ -107,7 +118,7 @@ class Navbar_admin extends Component {
             </ul>
           </div>
         </nav>
-        <Dataadmin />
+        <Dashboard />
       </div>
     );
   }

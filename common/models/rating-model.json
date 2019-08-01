@@ -1,0 +1,23 @@
+{
+  "name": "rating_model",
+  "plural": "rating_model",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "member_id": {
+      "type": "number",
+      "required": true
+    },
+    "style_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

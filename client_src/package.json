@@ -3,14 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
+    "bootstrap-sass": "^3.4.1",
+    "font-awesome": "^4.7.0",
     "loopback-content-range": "^1.1.0",
+    "material-ui": "^0.20.2",
+    "md5": "^2.2.1",
+    "mdbreact": "^4.18.0",
     "react": "^16.8.6",
     "react-admin-loopback": "^1.0.4",
+    "react-bs-datatable": "^1.2.8",
     "react-dom": "^16.8.6",
+    "react-materialize": "^3.3.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "SET PORT=3001 && react-scripts start",

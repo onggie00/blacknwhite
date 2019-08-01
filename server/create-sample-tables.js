@@ -16,10 +16,11 @@ var lbTables = [
   "barbershop",
   "member",
   "admin",
+  "highlight",
   "antrian",
   "category_model",
   "feedback",
-  "like_model",
+  "rating_model",
   "model_rambut",
   "stylist"
 ];

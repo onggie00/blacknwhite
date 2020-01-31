@@ -1,4 +1,7 @@
+## Black and White Single Page Apps using ReactJS
+### Single Page Apps (SPA) using ReactJS and Admin Panel + APIs using Codeigniter
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Project also using MDB Bootstrap for User Friendly UI. (https://mdbootstrap.com/)
 
 ## Before Run this project, Make sure you install the NodeJs and type this command
 
@@ -89,3 +92,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+********
+Thanks 
+Onggie Danny
+Web Developer

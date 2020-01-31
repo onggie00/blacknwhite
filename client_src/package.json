@@ -5,19 +5,18 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap-sass": "^3.4.1",
+    "cors": "^2.8.5",
     "font-awesome": "^4.7.0",
-    "loopback-content-range": "^1.1.0",
-    "material-ui": "^0.20.2",
+    "local-storage": "^2.0.0",
     "md5": "^2.2.1",
-    "mdbreact": "^4.18.0",
-    "react": "^16.8.6",
-    "react-admin-loopback": "^1.0.4",
-    "react-bs-datatable": "^1.2.8",
-    "react-dom": "^16.8.6",
-    "react-materialize": "^3.3.3",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
+    "mdbreact": "^4.21.0",
+    "qs": "^6.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
+    "react-scroll-to-component": "^1.0.2",
     "react-slick": "^0.24.0",
     "slick-carousel": "^1.8.1"
   },
@@ -35,5 +34,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }

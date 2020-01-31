@@ -8,15 +8,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import Login from "./Components/Login/Login";
-//import Main from "./Components/Main";
-//import AdminLogin from "./Components/admin/Admin_login";
-//import Dashboard from "./Components/Dashboard";
-//import AdminLogin from "./Components/admin/AdminLogin";
-//import Dataadmin from "./Components/admin/DataAdmin";
-import Navbaradmin from "./Components/admin/Navbar_admin";
 import Navbar from "./Components/Navbar";
-import Logout from "./Components/admin/Logout_admin";
-import Admintable from "./Components/admin/Admin_datatable";
 import Member from "./Components/member/Member";
 
 import "./App.css";
@@ -53,20 +45,6 @@ class App extends Component {
               component={Login}
             />
 
-            <Route
-              exact
-              path="/admin"
-              name="admindashboard"
-              render={props => <Navbaradmin {...props} />}
-              data={this.state.Admin}
-            />
-            <Route exact path="/logout" name="adminlogout" component={Logout} />
-            <Route
-              exact
-              path="/admin/datatable"
-              name="admintable"
-              component={Admintable}
-            />
             <Route exact path="/register" component={Member} />
 
             <Route name="not found">

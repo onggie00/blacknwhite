@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MemberRegister from "./Member_register";
 import MemberLogin from "./Member_login";
 import Axios from "axios";
+import qs from "qs";
 
 export class Member extends Component {
   constructor(props) {
@@ -11,21 +12,28 @@ export class Member extends Component {
       nama_lengkap: "",
       no_telp: "",
       alamat: "",
-      password: ""
+      password: "",
+      isLogin: "",
+      userLogin: []
     };
+    this.registerData = this.registerData.bind(this);
+    //this.LoginData = this.LoginData.bind(this);
   }
 
   registerData = data_member => {
-    Axios.request({
-      method: "post",
-      url: "http://localhost:3000/api/member",
-      data: data_member
-    })
+    Axios.post(
+      "https://api.bnwbarbershop.com/api/member/insert_member",
+      qs.stringify(data_member)
+    )
       .then(response => {
         //this.props.history.goBack();
+        this.backtoHomepage();
         console.log("Sukses Daftar");
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        console.log(this.response);
+      });
   };
 
   backtoHomepage = () => {
@@ -38,8 +46,22 @@ export class Member extends Component {
   };
 
   render() {
-    const { nama_lengkap, no_telp, alamat, password } = this.state;
-    const values = { nama_lengkap, no_telp, alamat, password };
+    const {
+      nama_lengkap,
+      no_telp,
+      alamat,
+      password,
+      isLogin,
+      userLogin
+    } = this.state;
+    const values = {
+      nama_lengkap,
+      no_telp,
+      alamat,
+      password,
+      isLogin,
+      userLogin
+    };
 
     if (window.location.pathname === "/register") {
       return (

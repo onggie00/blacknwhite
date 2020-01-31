@@ -1,7 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
   overflow-x: hidden !important;
+}
+.navbar {
+  padding-right: 30px;
+}
+.login-title {
+  font-family: "Lora", "Roboto", serif;
+  line-height: 1;
+  color: #3b3b3b;
 }
 .hidden {
   display: none;
@@ -15,9 +26,8 @@ body {
   z-index: 1000;
 }
 .nav_logo img {
-  width: 100px;
-  height: 100px;
-  filter: brightness(80%);
+  width: 50px;
+  height: 50px;
 }
 .no-shadows {
   box-shadow: none !important;
@@ -52,15 +62,41 @@ nav {
   height: 40%;
   margin-bottom: 50px;
 }
+
+.detail_antrian {
+  padding: 50px 30px;
+  text-align: center;
+  align-content: center;
+}
+.detail_antrian h1,
+h3 {
+  font-family: "Lora", "Roboto", serif;
+  color: #552d25;
+  line-height: 1;
+}
+.ambil_title {
+  font-family: "Roboto", serif;
+  color: #ffffff;
+}
+.detail_antrian h6 {
+  color: #c98a6a;
+  margin-bottom: 50px;
+}
+.detail_antrian p {
+  line-height: 1.4em;
+}
 .full {
-  background: #ffffff url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
+  background: #f4f4f4 url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 700px;
+  height: 950px;
   margin: auto;
   display: block;
   filter: brightness(100%);
+}
+.text-black {
+  color: #2b2b2b;
 }
 
 .zoom {
@@ -69,10 +105,10 @@ nav {
 
 @keyframes shrink {
   0% {
-    background-size: 110%;
+    background-size: 130%;
   }
   100% {
-    background-size: 100%;
+    background-size: 110%;
   }
 }
 .ambil_antrian {
@@ -84,6 +120,11 @@ nav {
   text-align: center;
   text-shadow: 3px 3px 5px #000000;
   padding-top: 100px;
+}
+.cek_antrian h3 {
+  font-family: "Lora", "Roboto", serif;
+  color: #552d25;
+  line-height: 1;
 }
 .form_antrian {
   width: 100%;
@@ -124,6 +165,10 @@ nav {
 }
 .slide2 {
   line-height: 1;
+}
+.slide3 {
+  line-height: 1;
+  padding: 10px;
 }
 
 .title {
@@ -228,14 +273,15 @@ nav {
 .login-main-content {
   opacity: 1;
 }
+
 .top_model_content {
   padding: 30px;
 }
 .top_model_content img {
-  height: 300px;
+  height: 400px;
   width: 100%;
   box-sizing: border-box;
-  object-fit: cover;
+  object-fit: fill;
   padding-bottom: 10px;
 }
 .top_model {
@@ -250,6 +296,18 @@ nav {
   color: #552d25;
 }
 .top_model .top_subtitle {
+  text-align: center;
+  color: #c98a6a;
+  font-size: 12pt;
+}
+.faq h1 {
+  font-weight: 300;
+  padding: 30px 50px 0px 50px;
+  text-align: center;
+  font-family: "Lora", "Poppins", Verdana;
+  color: #552d25;
+}
+.faq .faq_subtitle {
   text-align: center;
   color: #c98a6a;
   font-size: 12pt;
@@ -274,9 +332,7 @@ nav {
   padding-top: 10vh;
 }
 .stylist_section {
-  background: #f8f8f8 url(./Assets/image/homepage/bg-gradient.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: #fbf7f4;
   line-height: 1;
   padding: 50px 10px 50px 10px;
 }
@@ -303,7 +359,6 @@ nav {
   padding-top: 20px;
 }
 .hairstyle_model {
-  background: #f8f8f8 url(./Assets/image/homepage/bg-wall.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   padding: 50px;
@@ -317,6 +372,31 @@ nav {
   line-height: 1;
   padding-left: 50px;
 }
+.highlight {
+  background: #2b2a2a url(./Assets/image/homepage/bg-wall.jpg) repeat;
+  background-size: 100%;
+  line-height: 1;
+  padding: 50px 10px 20px 10px;
+}
+.highlight_slider {
+  padding: 10px 10px 10px 10px;
+}
+.highlight-card {
+  color: #ffffff;
+}
+
+.highlight h1 {
+  font-family: "Lora", "Poppins", serif;
+  text-align: center;
+  padding: 30px 30px 0px 30px;
+  color: #552d25;
+}
+.highlight_subtitle {
+  font-weight: 300;
+  text-align: center;
+  color: #000000;
+  font-size: 14pt;
+}
 
 .footer {
   padding-top: 10px;
@@ -327,14 +407,20 @@ nav {
   box-shadow: 0px 40px 10px -10px #fefefe inset;
 }
 
-@media only screen and (max-width: 992px) {
+.loader {
+  color: #2b2b2b;
+  text-align: center;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
   .main {
     padding-left: 10px;
   }
-  .logo img {
-    padding: 0px;
-    width: 300px;
-    max-height: 64px;
+  .nav_logo img {
+    width: 70px;
+    height: 60px;
+    margin-left: 30px;
   }
   .loginpage {
     padding: 30px;
@@ -348,40 +434,62 @@ nav {
     left: 50%;
   }
   .bg-register {
-    background: #2b2a2a url(./Assets/image/homepage/bg-stylist.jpg) no-repeat;
-    background-size: 200% 100%;
+    background: #2b2a2a url(./Assets/image/homepage/bg-register.jpg) no-repeat;
+    background-size: cover;
     background-position: center;
     height: 100vh;
   }
 }
-@media only screen and (max-width: 600px) {
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
   .main {
     padding-left: 10px;
   }
-  .logo img {
-    padding: 0px;
-    width: 300px;
-    max-height: 56px;
+  nav {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .nav_logo img {
+    margin-left: 0px;
   }
   .loginpage {
     padding: 30px;
     width: 80%;
   }
   .bg-register {
-    background: #2b2a2a url(./Assets/image/homepage/bg-register.jpg) no-repeat;
+    background: #2b2a2a url(./Assets/image/homepage/bg-stylist.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 50vh;
+    background-position: bottom;
+    height: 100vh;
+  }
+  .full {
+    background: #f4f4f4 url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    width: 100%;
+    height: 850px;
+    margin: auto;
+    display: block;
+    filter: brightness(100%);
   }
 }
-@media only screen and (max-width: 400px) {
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
   .main {
     padding-left: 10px;
   }
-  .logo img {
-    padding: 0px;
-    width: 300px;
-    max-height: 56px;
+  nav {
+    background-color: #2e2e2e;
+    text-align: right;
+  }
+  .nav_logo img {
+    margin: 0 auto;
+  }
+  .bg-register {
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
   }
   .loginpage {
     padding: 30px;
@@ -404,11 +512,11 @@ nav {
     margin-bottom: 100px;
   }
   .full {
-    background: #ffffff url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
+    background: #f4f4f4 url(./Assets/image/homepage/bg_antrian.jpg) no-repeat;
     background-size: 100%;
     background-position: top center;
     width: 100%;
-    height: 400px;
+    height: 700px;
     margin: auto;
     display: block;
     filter: brightness(100%);
@@ -435,6 +543,10 @@ nav {
     text-align: center;
     text-shadow: 3px 3px 5px #000000;
     padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .cek_antrian {
+    padding-top: 70px;
   }
   .form_antrian {
     width: 100%;

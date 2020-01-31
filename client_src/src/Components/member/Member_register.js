@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import logo from "../../Assets/image/logo/logo_black.png"; // logo import
 import {
   MDBRow,
   MDBContainer,
   MDBCol,
-  MDBIcon,
   MDBView,
   MDBMask,
   MDBInput,
@@ -12,7 +12,6 @@ import {
   MDBCardBody,
   MDBNotification
 } from "mdbreact";
-import md5 from "md5";
 import Axios from "axios";
 
 export class Member_register extends Component {
@@ -32,26 +31,27 @@ export class Member_register extends Component {
   };
 
   checkData = data_member => {
-    Axios.get("http://localhost:3000/api/member/findOne", {
+    Axios.get("https://api.bnwbarbershop.com/api/member/cek_member", {
       params: {
-        "filter[where][notelp]": data_member.notelp
+        notelp: data_member.notelp
       }
     })
       .then(response => {
-        if (response.status === 200) {
+        //console.log(response);
+        if (response.data.status === 1) {
           this.setState({
             isRegistered: 1
           });
-        }
-      })
-      .catch(err => {
-        //handle error
-        if (err.response.status === 404) {
+        } else {
           this.setState({
             isRegistered: 2
           });
           this.props.registerData(data_member);
         }
+      })
+      .catch(err => {
+        //handle error
+        //console.log(this.response);
       });
   };
 
@@ -60,9 +60,7 @@ export class Member_register extends Component {
       nama_lengkap: this.nama_lengkap.current.state.innerValue,
       notelp: this.notelp.current.state.innerValue,
       alamat: this.alamat.current.state.innerValue,
-      password: md5(this.password.current.state.innerValue),
-      created_at: new Date(),
-      status: "0"
+      password: this.password.current.state.innerValue
     };
     this.checkData(data_member);
     //console.log(data_member);
@@ -75,7 +73,7 @@ export class Member_register extends Component {
       <div name="Form_Registrasi">
         <MDBContainer fluid>
           <MDBRow center className="register-left-bg">
-            <MDBCol lg="8" md="7" sm="12" className="register-left">
+            <MDBCol lg="8" md="6" sm="12" className="register-left">
               <MDBContainer fluid>
                 <MDBView waves className="bg-register">
                   <MDBMask overlay="black-slight" className="flex-center">
@@ -86,7 +84,7 @@ export class Member_register extends Component {
                 </MDBView>
               </MDBContainer>
             </MDBCol>
-            <MDBCol lg="4" md="5" sm="12">
+            <MDBCol lg="4" md="6" sm="12">
               <MDBContainer className="register-form">
                 <MDBRow>
                   <MDBCol size="12">
@@ -114,8 +112,18 @@ export class Member_register extends Component {
                     )}
                     <MDBCard>
                       <MDBCardBody>
-                        <form onSubmit={this.onSubmit.bind(this)}>
-                          <p className="h5 text-center mb-4">
+                        <form
+                          onSubmit={this.onSubmit.bind(this)}
+                          encType="multipart/form-data"
+                        >
+                          <img
+                            width="90"
+                            height="90"
+                            src={logo}
+                            className="mx-auto d-block"
+                            alt="logo bnw"
+                          />
+                          <p className="h5 text-center mt-3 mb-4">
                             Form Pendaftaran Member
                           </p>
                           <div className="grey-text">

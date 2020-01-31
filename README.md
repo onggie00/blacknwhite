@@ -1,5 +1,5 @@
 ## Black and White Single Page Apps using ReactJS
-### Single Page Apps (SPA) using ReactJS and Admin Panel + APIs using Codeigniter
+### Single Page Apps (SPA) using ReactJS and Admin Panel + APIs using Codeigniter (May Uploaded on different git)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This Project also using MDB Bootstrap for User Friendly UI. (https://mdbootstrap.com/)
 
